@@ -1,0 +1,13 @@
+{
+  "name": "federated-modules-typescript",
+  "private": true,
+  "scripts": {
+    "install-all": "concurrently \"cd packages/pneus && npm i\" \"cd packages/acessorios && npm i\" \"cd packages/autocenter && npm i\" -n pneus,acessorios,autocenter",
+    "build": "concurrently \"cd packages/pneus && npm run build\" \"cd packages/acessorios && npm run build\" \"cd packages/autocenter && npm run build\" -n pneus,acessorios,autocenter",
+    "serve": "concurrently \"cd packages/pneus && npm run serve\" \"cd packages/acessorios && npm run serve\" \"cd packages/autocenter && npm run serve\" -n pneus,acessorios,autocenter",
+    "start": "concurrently \"cd packages/pneus && npm start\" \"cd packages/acessorios && npm start\" \"cd packages/autocenter && npm start\" -n pneus,acessorios,autocenter"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}

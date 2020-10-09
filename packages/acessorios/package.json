@@ -1,0 +1,27 @@
+{
+  "name": "autocenter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "serve dist -p 8081 --single",
+    "build": "webpack --mode production",
+    "start": "cross-env NODE_ENV=development webpack-dev-server"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.36",
+    "@types/react-dom": "^16.9.8",
+    "cross-env": "^7.0.2",
+    "html-webpack-plugin": "^4.3.0",
+    "html-webpack-tags-plugin": "^2.0.17",
+    "serve": "^11.3.2",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "5.0.0-beta.33",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

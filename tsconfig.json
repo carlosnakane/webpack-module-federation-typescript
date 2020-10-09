@@ -1,0 +1,27 @@
+// TS config shared by all hosts and remotes
+{
+  "exclude": [
+    "node_modules",
+    "./packages/**/node_modules"
+  ],
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "baseUrl": ".",
+    "module": "es2020",
+    "moduleResolution": "node",
+    "target": "es6",
+    "jsx": "react",
+    "strict": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "pneusApp/ListaPneus": [
+        "./packages/pneus/src/app"
+      ],
+      "acessoriosApp/ListaAcessorios": [
+        "./packages/acessorios/src/app"
+      ],
+    }
+  }
+}
