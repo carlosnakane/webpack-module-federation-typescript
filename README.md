@@ -3,7 +3,11 @@
 > Exemplo de implementaçao de Microfrontends com o novo plugin do
 > webpack pra federação de módulos javascript.
 
-Utilizando o plugin o webpack não irá reclamar de imports dinâmicos especificados em sua configuração durante o build time. Isso possibilitará importar módulos de outras builds feitas com o webpack em runtime e utiliza-los normalmente como se fossem módulos da aplicação.
+Exportar partes de aplicações javascript atualmente é feito extraindo a parte desejada em um pacote NPM e depois integrando-o em tempo de build.
+
+Pensando nisso o time do Webpack criou uma solução de exportar módulos javascript de uma aplicação de forma muito transparente e importa-los em tempo de execução.
+
+Utilizando o plugin Webpack Module Federation o Webpack não irá reclamar de imports dinâmicos especificados em sua configuração durante o build time. Isso possibilitará importar módulos de outras builds feitas com o webpack em runtime e utiliza-los normalmente como se fossem módulos da aplicação.
 
 Nessa implementação é demonstrada uma forma de fazer com que o typescript conheça o módulo federado em tempo de desenvolvimento e build.
 
@@ -37,7 +41,7 @@ Todos scripts podem ser utilizados dentro de cada projeto ou na raiz do reposit�
 
 ## Conclusão
 
-O webpack module federation **que ainda está em beta** é um game changer na jornada de levar os conceitos dos microserviços ao frontend no que se trata à abstração de compartilhamento de módulos javascript. Existem downsides ainda como por exemplo ter que especificar o publicPath com um endereço http durante a build porém o time do webpack vem trabalhando para que a solução seja viável. 
+O webpack module federation ~~que ainda está em beta~~ é um game changer na jornada de levar os conceitos dos microserviços ao frontend no que se trata à abstração de compartilhamento de módulos javascript. Existem downsides ainda como por exemplo ter que especificar o publicPath com um endereço http durante a build porém o time do webpack vem trabalhando para que a solução seja viável. 
 
 Em contra partida os browsers ainda não estão preparados para trabalhar com os conceitos de microserviços dado que a isolação desses módulos não existe tornando qualquer implementação desse tipo bastante delicada. U
 
