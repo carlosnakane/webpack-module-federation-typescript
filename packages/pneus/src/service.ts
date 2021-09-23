@@ -27,9 +27,10 @@ const mock = [{
 },
 ]
 
-const getList = (somentePromocoes: boolean): Model[] => {
-  return !somentePromocoes ?
-    mock : mock.filter(m => m.precoPromocional)
+const getList = (somentePromocoes: boolean): Promise<Model[]> => {
+  return Promise.resolve(!somentePromocoes ?
+    mock : mock.filter(m => m.precoPromocional
+    ));
 }
 
 export { getList };

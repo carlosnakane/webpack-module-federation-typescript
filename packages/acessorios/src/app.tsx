@@ -19,7 +19,7 @@ const App = (props: Props) => {
   }, []);
 
   return (
-    <div>
+    <div> 🚗
       {list == null ? 'Sem resultados' :
         <ul>
           {list.map(i => <li key={i.nome} onClick={() => onSelected(i)} className={i.precoPromocional ? 'promocao' : ''}>{i.nome}</li>)}
